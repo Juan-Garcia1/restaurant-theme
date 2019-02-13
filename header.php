@@ -9,3 +9,12 @@
 </head>
 <body <?php body_class(); ?>>
   
+  <header>
+    <?php
+      wp_nav_menu(array(
+        "wp_theme_location" => "primary",
+        "container" => "nav"
+      ));
+    ?>
+  </header>
+  <main>
