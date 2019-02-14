@@ -38,3 +38,16 @@ function rosa_excerpt_readmore($more) {
   return "...";
 }
 add_filter("excerpt_more", "rosa_excerpt_readmore");
+
+// ADD WIDGET LOCATIONS
+function rosa_init_widgets() {
+  register_sidebar(array(
+    "name" => "Sidebar",
+    "id" => "sidebar",
+    "before_widget" => "<div>",
+    "after_widger" => "</div>",
+    "before_title" => "<h3>",
+    "after_title" => "</h3>"
+  ));
+}
+add_action("widgets_init", "rosa_init_widgets");
