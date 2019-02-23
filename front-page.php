@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 <div class="hero">
-  <div class="container"></div>
+  <div class="container">
+    <div class="title">
+      <h2 class="title__secondary">Welcome</h2>
+      <h1 class="title__primary title__primary--white">the rosa</h1>
+    </div>
+    <!-- title end -->
+    <p>ready to be opened</p>
+  </div>
 </div>
 
 <div class="container">
