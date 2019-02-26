@@ -2,7 +2,7 @@
 
 // LOAD CSS
 function rosa_load_stylesheets() {
-  wp_register_style("normalize", get_template_directory_uri() . "/inc/normalize.css");
+  wp_register_style("normalize", get_template_directory_uri() . "/css/normalize.css");
   wp_enqueue_style("normalize");
 
   wp_register_style("stylesheet", get_template_directory_uri() . "/style.css");
@@ -51,3 +51,5 @@ function rosa_init_widgets() {
   ));
 }
 add_action("widgets_init", "rosa_init_widgets");
+
+require get_template_directory() . "/inc/customizer.php";

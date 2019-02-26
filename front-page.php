@@ -1,12 +1,18 @@
 <?php get_header(); ?>
+<style>
+  .hero {
+    background: url(<?php echo get_theme_mod("hero_image", get_bloginfo("template_url") . "/img/hero_image.jpg"); ?>) no-repeat center center / cover; 
+  }
+</style>
+
 <div class="hero">
   <div class="container">
     <div class="title">
-      <h2 class="title__secondary">Welcome</h2>
-      <h1 class="title__primary title__primary--white">the rosa</h1>
+      <h2 class="title__secondary"><?php echo get_theme_mod("hero_greeting"); ?></h2>
+      <h1 class="title__primary title__primary--white"><?php echo get_bloginfo("name"); ?></h1>
     </div>
     <!-- title end -->
-    <p>ready to be opened</p>
+    <p><?php echo get_bloginfo("description"); ?></p>
   </div>
 </div>
 
@@ -15,12 +21,11 @@
     <div class="row">
       <div class="col">
         <div class="title">
-          <h2 class="title__secondary">Discover</h2>
-          <h1 class="title__primary title__primary--black">our story</h1>
+          <h2 class="title__secondary"><?php echo get_theme_mod("section-1_secondary_title"); ?></h2>
+          <h1 class="title__primary title__primary--black"><?php echo get_theme_mod("section-1_primary_title"); ?></h1>
         </div>
         <!-- title end -->
-        <p>Rosa is a restaurant, bar and coffee roastery located on a busy corner in Farringdon's Exmouth Market. With glazed frontage on two sides of the building, overlooking the market and bustling London intersection.</p>
-        <a href="#">about us</a>
+        <p><?php echo get_theme_mod("section-1_paragraph"); ?></p>
       </div>
       <!-- col end -->
       <div class="col">
@@ -89,7 +94,6 @@
         </div>
         <!-- title end -->
         <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.</p>
-        <a href="#">make a reservation</a>
       </div>
       <!-- col end -->
       <div class="col">
