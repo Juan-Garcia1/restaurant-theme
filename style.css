@@ -2,17 +2,10 @@
 Theme Name: The Rosa
 */
 
-:root {
-  --primary: #c59d5f;
-}
-
 body {
   font-family: sans-serif;
 }
 
-a {
-  color: var(--primary);
-}
 
 .container {
   max-width: 85%;
@@ -28,6 +21,11 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+}
+
+/* FRONT PAGE */
+.hero {
+  height: 100vh;
 }
 
 .post-date {
