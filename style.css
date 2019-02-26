@@ -28,6 +28,10 @@ body {
   height: 100vh;
 }
 
+.sec-2-background-img {
+  height: 50vh;
+}
+
 .post-date {
   color: gray;
   text-transform: uppercase;
