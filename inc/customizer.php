@@ -103,6 +103,136 @@ function rosa_customize_register($wp_customize) {
       "type" => "textarea",
       "priority" => 3
     )) );
+
+    $wp_customize->add_setting("section-1_img1", array(
+      "default" => get_bloginfo("template_directory") . "/img/section_1_img1.jpg",
+      "transport" => "refresh"
+    ));
+  
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-1_img1", array(
+      "label" => __("Image One", "rosa"),
+      "section" => "section-1",
+      "settings" => "section-1_img1",
+      "priority" => 4
+      )) );
+
+      $wp_customize->add_setting("section-1_img2", array(
+        "default" => get_bloginfo("template_directory") . "/img/section_1_img2.jpg",
+        "transport" => "refresh"
+      ));
+    
+      $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-1_img2", array(
+        "label" => __("Image Two", "rosa"),
+        "section" => "section-1",
+        "settings" => "section-1_img2",
+        "priority" => 5
+        )) );
+
+    // SECTION 2
+    $wp_customize->add_section("section-2", array(
+      "title" => __("Section 2", "rosa")
+    ));
+
+    $wp_customize->add_setting("section-2_primary_title", array(
+      "default" => "recipes",
+      "transport" => "refresh"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-2_primary_title", array(
+      "label" => __("Primary Title", "rosa"),
+      "section" => "section-2",
+      "setting" => "section-2_primary_title",
+      "priority" => 3
+    )) );
+
+    $wp_customize->add_setting("section-2_secondary_title", array(
+      "default" => "Tasteful",
+      "transport" => "refresh"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-2_secondary_title", array(
+      "label" => __("Secondary Title", "rosa"),
+      "section" => "section-2",
+      "setting" => "section-2_secondary_title",
+      "priority" => 2
+    )) );
+
+    $wp_customize->add_setting("section-2_background_image", array(
+      "default" => get_bloginfo("template_directory") . "/img/section_2_img.jpg",
+      "transport" => "refresh"
+    ));
+  
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-2_background_image", array(
+      "label" => __("Background Image", "rosa"),
+      "section" => "section-2",
+      "settings" => "section-2_background_image",
+      "priority" => 1
+      )) );
+
+    // SECTION 3
+    $wp_customize->add_section("section-3", array(
+      "title" => __("Section 3", "rosa")
+    ));
+
+    $wp_customize->add_setting("section-3_primary_title", array(
+      "default" => "menu",
+      "transport" => "refresh"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_primary_title", array(
+      "label" => __("Primary Title", "rosa"),
+      "section" => "section-3",
+      "setting" => "section-3_primary_title",
+      "priority" => 2
+    )) );
+
+    $wp_customize->add_setting("section-3_secondary_title", array(
+      "default" => "Discover",
+      "transport" => "refresh"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_secondary_title", array(
+      "label" => __("Secondary Title", "rosa"),
+      "section" => "section-3",
+      "setting" => "section-3_secondary_title",
+      "priority" => 1
+    )) );
+
+    $wp_customize->add_setting("section-3_paragraph", array(
+      "default" => "For those with pure food indulgence in mind, come next door and state your desires with our ever changing internationally and seasonally inspired samll plates. We love food, lots of different food, just like you.",
+      "transport" => "refresh"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_paragraph", array(
+      "label" => __("Paragraph", "rosa"),
+      "section" => "section-3",
+      "setting" => "section-3_paragraph",
+      "type" => "textarea",
+      "priority" => 3
+    )) );
+
+    $wp_customize->add_setting("section-3_link_text", array(
+      "default" => "view the full menu"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_link_text", array(
+      "label" => __("Link Text", "rosa"),
+      "section" => "section-3",
+      "settings" => "section-3_link_text",
+      "type" => "text",
+      "priority" => 4
+    )) );
+
+    $wp_customize->add_setting("section-3_link");
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_link", array(
+      "label" => __("Link", "rosa"),
+      "section" => "section-3",
+      "settings" => "section-3_link",
+      "type" => "dropdown-pages",
+      "priority" => 5
+    )) );
+    
 }
 add_action("customize_register", "rosa_customize_register");
 
