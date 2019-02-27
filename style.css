@@ -28,7 +28,8 @@ body {
   height: 100vh;
 }
 
-.sec-2-background-img {
+.sec-2-background-img,
+.sec-4-background-img {
   height: 50vh;
 }
 
