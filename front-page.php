@@ -1,12 +1,4 @@
 <?php get_header(); ?>
-<style>
-  .hero {
-    background: url(<?php echo get_theme_mod("hero_image", get_bloginfo("template_url") . "/img/hero_image.jpg"); ?>) no-repeat center center / cover; 
-  }
-  .sec-2-background-img {
-    background: url(<?php echo get_theme_mod("section-2_background_image", get_bloginfo("template_url") . "/img/section_2_img.jpg"); ?>) no-repeat center center / cover; 
-  }
-</style>
 
 <div class="hero">
   <div class="container">
@@ -55,10 +47,10 @@
   <section>
     <div class="row">
       <div class="col">
-      <img src="" alt="image 1 goes here">
-      <img src="" alt="image 2 goes here">
-      <img src="" alt="image 3 goes here">
-      <img src="" alt="image 4 goes here">
+      <img src="<?php echo get_theme_mod("section-3_img1", get_bloginfo("template_url") . "/img/section_3_img1.jpg") ?>" >
+      <img src="<?php echo get_theme_mod("section-3_img2", get_bloginfo("template_url") . "/img/section_3_img2.jpg") ?>" >
+      <img src="<?php echo get_theme_mod("section-3_img3", get_bloginfo("template_url") . "/img/section_3_img3.jpg") ?>" >
+      <img src="<?php echo get_theme_mod("section-3_img4", get_bloginfo("template_url") . "/img/section_3_img4.jpg") ?>" >
       </div>
       <!-- col end -->
       <div class="col">
@@ -77,11 +69,11 @@
 </div>
 <!-- container end -->
 
-<section>
+<section class="sec-4-background-img">
   <div class="center">
     <div class="title">
-      <h2 class="title__secondary">The perfect</h2>
-      <h1 class="title__primary title__primary--white">blend</h1>
+      <h2 class="title__secondary"><?php echo get_theme_mod("section-4_secondary_title", "The perfect"); ?></h2>
+      <h1 class="title__primary title__primary--white"><?php echo get_theme_mod("section-4_primary_title", "blend"); ?></h1>
     </div>
     <!-- title end -->
   </div>
@@ -92,16 +84,16 @@
     <div class="row">
       <div class="col">
         <div class="title">
-          <h2 class="title__secondary">Culinary</h2>
-          <h1 class="title__primary title__primary--black">delight</h1>
+          <h2 class="title__secondary"><?php echo get_theme_mod("section-5_secondary_title", "Culinary"); ?></h2>
+          <h1 class="title__primary title__primary--black"><?php echo get_theme_mod("section-5_primary_title", "delight"); ?></h1>
         </div>
         <!-- title end -->
-        <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.</p>
+        <p><?php echo get_theme_mod("section-5_paragraph", "We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time."); ?></p>
       </div>
       <!-- col end -->
       <div class="col">
-        <img src="" alt="image1 goes here">
-        <img src="" alt="image 2 goes here">
+        <img src="<?php echo get_theme_mod("section-5_img1", get_bloginfo("template_url") . "/img/section_5_img1.jpg"); ?>" >
+        <img src="<?php echo get_theme_mod("section-5_img2", get_bloginfo("template_url") . "/img/section_5_img2.jpg"); ?>" >
       </div>
       <!-- col end -->
     </div>
