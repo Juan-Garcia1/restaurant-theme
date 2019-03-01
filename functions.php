@@ -12,10 +12,18 @@ add_action("wp_enqueue_scripts", "rosa_load_stylesheets");
 
 // LOAD JAVASCRIPT
 function rosa_load_js() {
+  wp_register_script("jquery-script", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", "", 1, true);
+  wp_enqueue_script("jquery-script");
+
   wp_register_script("mainjs", get_template_directory_uri() . "/js/index.js", "", array(), true);
   wp_enqueue_script("mainjs");
 }
 add_action("wp_enqueue_scripts", "rosa_load_js");
+
+function rosa_customizer_live_preview() {
+  wp_enqueue_script("rosa-themecustomizer", get_template_directory_uri()."/js/theme-customizer.js", array("jquery","customize-preview" ), "", true);
+}
+add_action( 'customize_preview_init', 'rosa_customizer_live_preview' );
 
 // ADD FEATURED IMAGE SUPPORT
 add_theme_support("post-thumbnails");

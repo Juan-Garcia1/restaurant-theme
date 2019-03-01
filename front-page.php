@@ -3,7 +3,7 @@
 <div class="hero">
   <div class="container">
     <div class="title">
-      <h2 class="title__secondary"><?php echo get_theme_mod("hero_greeting"); ?></h2>
+      <h2 class="title__secondary" id="greeting"><?php echo get_theme_mod("hero_greeting"); ?></h2>
       <h1 class="title__primary title__primary--white"><?php echo get_bloginfo("name"); ?></h1>
     </div>
     <!-- title end -->

@@ -6,20 +6,46 @@
   // 3. Sections(Group) - a group of options. example: Navigation, Widgets, ...
 function rosa_customize_register($wp_customize) {
   
+  // THEME COLORS SECTION
+  $wp_customize->add_section("color", array(
+    "title" => __("Colors", "rosa")
+  ));
+
+  $wp_customize->add_setting("color_primary", array(
+    "default" => "#c59d5f",
+    "transport" => "postMessage"
+  ));
+
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, "color_primary", array(
+    "label" => __("Primary", "rosa"),
+    "section" => "color",
+    "setting" => "color_primary"
+  )) );
+
+  $wp_customize->add_setting("color_secondary", array(
+    "default" => "#252525",
+    "transport" => "postMessage"
+  ));
+
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, "color_secondary", array(
+    "label" => __("Secondary", "rosa"),
+    "section" => "color",
+    "setting" => "color_secondary"
+  )) );
+
   // HERO SECTION
   $wp_customize->add_section("hero", array(
-    "title" => __("Hero", "rosa"),
-    "priority" => 130
+    "title" => __("Hero", "rosa")
   ));
 
   $wp_customize->add_setting("hero_greeting", array(
     "default" => "welcome",
-    "transport" => "refresh"
+    "transport" => "postMessage"
   ));
 
   $wp_customize->add_setting("hero_image", array(
     "default" => get_bloginfo("template_directory") . "/img/hero_image.jpg",
-    "transport" => "refresh"
+    "transport" => "postMessage"
   ));
 
   $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "hero_image", array(
@@ -33,34 +59,6 @@ function rosa_customize_register($wp_customize) {
     "section" => "hero",
     "settings" => "hero_greeting"
     )) );
-  
-    // THEME COLORS SECTION
-    $wp_customize->add_section("color", array(
-      "title" => __("Theme Colors", "rosa")
-    ));
-
-    $wp_customize->add_setting("color_primary", array(
-      "default" => "#c59d5f",
-      "transport" => "refresh"
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, "color_primary", array(
-      "label" => __("Primary", "rosa"),
-      "section" => "color",
-      "setting" => "color_primary"
-    )) );
-
-    $wp_customize->add_setting("color_secondary", array(
-      "default" => "#252525",
-      "transport" => "refresh"
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, "color_secondary", array(
-      "label" => __("Secondary", "rosa"),
-      "section" => "color",
-      "setting" => "color_secondary"
-    )) );
-
 
     // SECTION 1
     $wp_customize->add_section("section-1", array(
@@ -69,7 +67,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-1_primary_title", array(
       "default" => "our story",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-1_primary_title", array(
@@ -81,7 +79,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-1_secondary_title", array(
       "default" => "Discover",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-1_secondary_title", array(
@@ -93,7 +91,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-1_paragraph", array(
       "default" => "Rosa is a restaurant, bar and coffee roastery located on a busy corner in Farringdon's Exmouth Market. With glazed frontage on two sides of the building, overlooking the market and bustling London intersection.",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-1_paragraph", array(
@@ -106,7 +104,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-1_img1", array(
       "default" => get_bloginfo("template_directory") . "/img/section_1_img1.jpg",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
   
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-1_img1", array(
@@ -118,7 +116,7 @@ function rosa_customize_register($wp_customize) {
 
       $wp_customize->add_setting("section-1_img2", array(
         "default" => get_bloginfo("template_directory") . "/img/section_1_img2.jpg",
-        "transport" => "refresh"
+        "transport" => "postMessage"
       ));
     
       $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-1_img2", array(
@@ -135,7 +133,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-2_primary_title", array(
       "default" => "recipes",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-2_primary_title", array(
@@ -147,7 +145,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-2_secondary_title", array(
       "default" => "Tasteful",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-2_secondary_title", array(
@@ -159,7 +157,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-2_background_image", array(
       "default" => get_bloginfo("template_directory") . "/img/section_2_img.jpg",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
   
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-2_background_image", array(
@@ -176,7 +174,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-3_primary_title", array(
       "default" => "menu",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_primary_title", array(
@@ -188,7 +186,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-3_secondary_title", array(
       "default" => "Discover",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_secondary_title", array(
@@ -200,7 +198,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-3_paragraph", array(
       "default" => "For those with pure food indulgence in mind, come next door and state your desires with our ever changing internationally and seasonally inspired samll plates. We love food, lots of different food, just like you.",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_paragraph", array(
@@ -284,7 +282,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-4_primary_title", array(
       "default" => "blend",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-4_primary_title", array(
@@ -296,7 +294,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-4_secondary_title", array(
       "default" => "The perfect",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-4_secondary_title", array(
@@ -308,7 +306,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-4_background_image", array(
       "default" => get_bloginfo("template_directory") . "/img/section_4_img.jpg",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
   
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-4_background_image", array(
@@ -325,7 +323,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-5_primary_title", array(
       "default" => "delight",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-5_primary_title", array(
@@ -337,7 +335,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-5_secondary_title", array(
       "default" => "Culinary",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-5_secondary_title", array(
@@ -349,7 +347,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-5_paragraph", array(
       "default" => "We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-5_paragraph", array(
@@ -362,7 +360,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-5_img1", array(
       "default" => get_bloginfo("template_directory") . "/img/section_5_img1.jpg",
-      "transport" => "refresh"
+      "transport" => "postMessage"
     ));
   
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-5_img1", array(
@@ -374,7 +372,7 @@ function rosa_customize_register($wp_customize) {
 
       $wp_customize->add_setting("section-5_img2", array(
         "default" => get_bloginfo("template_directory") . "/img/section_5_img2.jpg",
-        "transport" => "refresh"
+        "transport" => "postMessage"
       ));
     
       $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-5_img2", array(
