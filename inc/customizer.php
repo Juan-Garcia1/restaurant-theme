@@ -5,7 +5,11 @@
   // 2. Settings(Database) - saves/set values into a setting to later get or load a value from a setting
   // 3. Sections(Group) - a group of options. example: Navigation, Widgets, ...
 function rosa_customize_register($wp_customize) {
-  
+
+  // SITE IDENTITY
+  $wp_customize->get_setting("blogname")->transport = "postMessage";
+  $wp_customize->get_setting("blogdescription")->transport = "postMessage";
+
   // THEME COLORS SECTION
   $wp_customize->add_section("color", array(
     "title" => __("Colors", "rosa")

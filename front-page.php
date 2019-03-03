@@ -7,7 +7,7 @@
       <h1 class="title__primary title__primary--white"><?php echo get_bloginfo("name"); ?></h1>
     </div>
     <!-- title end -->
-    <p><?php echo get_bloginfo("description"); ?></p>
+    <p id="tagline"><?php echo get_bloginfo("description"); ?></p>
   </div>
 </div>
 

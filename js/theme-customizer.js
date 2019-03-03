@@ -1,5 +1,21 @@
 (function ($) {
 
+  // SITE IDENTITY
+  // Update the site title real time...
+  wp.customize("blogname", function (value) {
+    value.bind(function (newval) {
+      $(".hero .title h1").html(newval);
+    });
+  });
+
+  // Update the tagline in real time...
+  wp.customize("blogdescription", function (value) {
+    value.bind(function (newval) {
+      $("#tagline").html(newval);
+    });
+  });
+
+  // COLORS
   // Update primary color in real time...
   wp.customize("color_primary", function (value) {
     value.bind(function (newval) {
