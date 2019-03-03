@@ -12,7 +12,7 @@
 </div>
 
 <div class="container">
-  <section>
+  <section id="sec-1">
     <div class="row">
       <div class="col">
         <div class="title">
@@ -33,7 +33,7 @@
 </div>
 <!-- container end -->
 
-<section class="sec-2-background-img">
+<section id="sec-2" class="sec-2-background-img">
   <div class="center">
     <div class="title">
       <h2 class="title__secondary"><?php echo get_theme_mod("section-2_secondary_title", "Tasteful"); ?></h2>
@@ -44,7 +44,7 @@
 </section>
 
 <div class="container">
-  <section>
+  <section id="sec-3">
     <div class="row">
       <div class="col">
       <img src="<?php echo get_theme_mod("section-3_img1", get_bloginfo("template_url") . "/img/section_3_img1.jpg") ?>" >
@@ -69,7 +69,7 @@
 </div>
 <!-- container end -->
 
-<section class="sec-4-background-img">
+<section id="sec-4" class="sec-4-background-img">
   <div class="center">
     <div class="title">
       <h2 class="title__secondary"><?php echo get_theme_mod("section-4_secondary_title", "The perfect"); ?></h2>
@@ -80,7 +80,7 @@
 </section>
 
 <div class="container">
-  <section>
+  <section id="sec-5">
     <div class="row">
       <div class="col">
         <div class="title">

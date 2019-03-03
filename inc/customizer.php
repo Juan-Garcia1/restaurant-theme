@@ -210,7 +210,8 @@ function rosa_customize_register($wp_customize) {
     )) );
 
     $wp_customize->add_setting("section-3_link_text", array(
-      "default" => "view the full menu"
+      "default" => "view the full menu",
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_link_text", array(
@@ -221,7 +222,9 @@ function rosa_customize_register($wp_customize) {
       "priority" => 4
     )) );
 
-    $wp_customize->add_setting("section-3_link");
+    $wp_customize->add_setting("section-3_link", array(
+      "transport" => "postMessage"
+    ));
 
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, "section-3_link", array(
       "label" => __("Link", "rosa"),
@@ -233,6 +236,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-3_img1", array(
       "default" => get_bloginfo("template_directory") . "/img/section_3_img1.jpg",
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-3_img1", array(
@@ -244,6 +248,7 @@ function rosa_customize_register($wp_customize) {
     
     $wp_customize->add_setting("section-3_img2", array(
       "default" => get_bloginfo("template_directory") . "/img/section_3_img2.jpg",
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-3_img2", array(
@@ -255,6 +260,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-3_img3", array(
       "default" => get_bloginfo("template_directory") . "/img/section_3_img3.jpg",
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-3_img3", array(
@@ -266,6 +272,7 @@ function rosa_customize_register($wp_customize) {
 
     $wp_customize->add_setting("section-3_img4", array(
       "default" => get_bloginfo("template_directory") . "/img/section_3_img4.jpg",
+      "transport" => "postMessage"
     ));
 
     $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, "section-3_img4", array(
@@ -388,7 +395,8 @@ function rosa_customize_register($wp_customize) {
       ));
 
       $wp_customize->add_setting("footer-title", array(
-        "default" => "about rosa"
+        "default" => "about rosa",
+        "transport" => "postMessage"
       ));
 
       $wp_customize->add_control( new WP_Customize_Control($wp_customize, "footer-title", array(
@@ -398,7 +406,8 @@ function rosa_customize_register($wp_customize) {
       )) );
 
       $wp_customize->add_setting("footer-paragraph", array(
-        "default" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nesciunt reprehenderit possimus saepe sunt dolorem odio labore accusamus, sint tempore."
+        "default" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nesciunt reprehenderit possimus saepe sunt dolorem odio labore accusamus, sint tempore.",
+        "transport" => "postMessage"
       ));
 
       $wp_customize->add_control( new WP_Customize_Control($wp_customize, "footer-paragraph", array(

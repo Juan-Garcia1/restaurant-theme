@@ -20,11 +20,6 @@ function rosa_load_js() {
 }
 add_action("wp_enqueue_scripts", "rosa_load_js");
 
-function rosa_customizer_live_preview() {
-  wp_enqueue_script("rosa-themecustomizer", get_template_directory_uri()."/js/theme-customizer.js", array("jquery","customize-preview" ), "", true);
-}
-add_action( 'customize_preview_init', 'rosa_customizer_live_preview' );
-
 // ADD FEATURED IMAGE SUPPORT
 add_theme_support("post-thumbnails");
 // ADD MENU SUPPORT
@@ -61,3 +56,9 @@ function rosa_init_widgets() {
 add_action("widgets_init", "rosa_init_widgets");
 
 require get_template_directory() . "/inc/customizer.php";
+
+// MAKE CUSTOM CHANGES IN REAL TIME
+function rosa_customizer_live_preview() {
+  wp_enqueue_script("rosa-themecustomizer", get_template_directory_uri()."/js/theme-customizer.js", array("jquery","customize-preview" ), "", true);
+}
+add_action( 'customize_preview_init', 'rosa_customizer_live_preview' );
