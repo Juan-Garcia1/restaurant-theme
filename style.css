@@ -23,9 +23,71 @@ body {
   width: 100%;
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.title {
+  line-height: 0.5;
+}
+
+.title__primary {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 45px;
+  margin: 0;
+}
+
+.title__secondary {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 90px;
+  font-weight: normal;
+}
+
+.title__primary.title__primary--white {
+  color: #fff;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
 /* FRONT PAGE */
 .hero {
   height: 100vh;
+}
+
+#tagline {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+#sec-1,
+#sec-3,
+#sec-5 {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.center-images img {
+  width: 45%;
+}
+
+.center-images {
+  text-align: center;
 }
 
 .sec-2-background-img,
