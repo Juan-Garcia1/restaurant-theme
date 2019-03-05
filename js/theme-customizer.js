@@ -246,4 +246,11 @@
     });
   });
 
+  // Update footer background color in real time
+  wp.customize("footer-background", function (value) {
+    value.bind(function (newval) {
+      $("footer").css("background-color", newval);
+    });
+  })
+
 })(jQuery);

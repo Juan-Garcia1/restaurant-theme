@@ -421,6 +421,17 @@ function rosa_customize_register($wp_customize) {
         "type" => "textarea"
       )) );
 
+      $wp_customize->add_setting("footer-background", array(
+        "default" => "#121212",
+        "transport" => "postMessage"
+      ));
+
+      $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, "footer-background", array(
+        "label" => __("Background Color", "rosa"),
+        "section" => "footer",
+        "setting" => "footer-background"
+      )));
+
 }
 add_action("customize_register", "rosa_customize_register");
 
@@ -436,6 +447,9 @@ function mytheme_customize_css() { ?>
       }
       .sec-4-background-img {
         background: url(<?php echo get_theme_mod("section-4_background_image", get_bloginfo("template_url") . "/img/section_4_img.jpg"); ?>) no-repeat center center / cover;
+      }
+      footer {
+        background-color: <?php echo get_theme_mod("footer-background"); ?>;
       }
   </style>
 <?php
