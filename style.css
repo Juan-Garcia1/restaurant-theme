@@ -95,6 +95,26 @@ body {
   height: 50vh;
 }
 
+/* FOOTER */
+footer {
+  color:#fff;
+  padding: 5% 0;
+}
+
+#wrapper {
+  width: 50%;
+  margin: auto;
+}
+
+#about-container {
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+#about-title {
+  font-weight: 400;
+}
+
 .post-date {
   color: gray;
   text-transform: uppercase;

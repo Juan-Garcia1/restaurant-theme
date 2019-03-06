@@ -449,7 +449,7 @@ function mytheme_customize_css() { ?>
         background: url(<?php echo get_theme_mod("section-4_background_image", get_bloginfo("template_url") . "/img/section_4_img.jpg"); ?>) no-repeat center center / cover;
       }
       footer {
-        background-color: <?php echo get_theme_mod("footer-background"); ?>;
+        background-color: <?php echo get_theme_mod("footer-background", "#121212"); ?>;
       }
   </style>
 <?php
