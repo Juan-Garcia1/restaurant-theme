@@ -4,7 +4,7 @@
       <?php if( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post() ?>
           <article class="row">
-            <div class="col text-center">
+            <div class="col text-center mb-md">
               <header>
               <p class="post-date"><?php the_date("M • nS • Y"); ?></p>
                 <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
