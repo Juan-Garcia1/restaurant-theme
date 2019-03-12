@@ -69,7 +69,7 @@ function rosa_customizer_live_preview() {
 function rosa_custom_logo_setup() {
   $defaults = array(
       'height'      => 100,
-      'width'       => 400,
+      'width'       => 250,
       'flex-height' => true,
       'flex-width'  => true
   );
