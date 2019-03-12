@@ -84,6 +84,42 @@ a:hover {
   color: #c59d5f;
 }
 
+/* HEADER */
+header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+#logo-link {
+  margin: auto;
+}
+#logo-img {
+  width: 75%;
+}
+.menu-main-menu-container {
+  position: fixed;
+  background: #fff;
+  height: 100%;
+  width: 250px;
+  top: 0;
+  padding-top: 100px;
+}
+.menu li a {
+  display: block;
+  font-weight: 500;
+  padding: 14px 25px;
+  text-transform: uppercase;
+  color: #252525;
+}
+.menu li a:hover {
+  color: #c59d5f;
+}
+#nav-btn {
+  background: none;
+  border: 0;
+  font-size: 24px;
+}
+
 /* FRONT PAGE */
 .hero {
   height: 100vh;

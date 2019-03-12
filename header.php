@@ -1,3 +1,9 @@
+<?php 
+  // logo
+  $custom_logo_id = get_theme_mod("custom_logo");
+  $logo = wp_get_attachment_image_src($custom_logo_id, "full");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +17,19 @@
 <body <?php body_class(); ?>>
   
   <header>
+    <?php if(has_custom_logo()) : ?>
+      <a id="logo-link" href="<?php echo esc_url(home_url("/")); ?>">
+        <img id="logo-img" src="<?php echo esc_url($logo[0]); ?>" />
+      </a>
+    <?php endif; ?>
     <?php
       wp_nav_menu(array(
         "wp_theme_location" => "primary",
         "container" => "nav"
       ));
     ?>
+    <button id="nav-btn">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
   </header>
   <main>
