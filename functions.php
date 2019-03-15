@@ -30,7 +30,7 @@ add_theme_support("menus");
 
 register_nav_menus(
   array(
-    "primary" => __("Primary Menu", "theme")
+    "primary" => __("Primary Menu", "rosa")
   )
 );
 
@@ -51,7 +51,7 @@ function rosa_init_widgets() {
     "name" => "Sidebar",
     "id" => "sidebar",
     "before_widget" => "<div>",
-    "after_widger" => "</div>",
+    "after_widget" => "</div>",
     "before_title" => "<h3>",
     "after_title" => "</h3>"
   ));
