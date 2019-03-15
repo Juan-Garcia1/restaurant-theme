@@ -17,19 +17,23 @@
 <body <?php body_class(); ?>>
   
   <header>
-    <?php if(has_custom_logo()) : ?>
-      <a id="logo-link" href="<?php echo esc_url(home_url("/")); ?>">
-        <img id="logo-img" src="<?php echo esc_url($logo[0]); ?>" />
-      </a>
-    <?php endif; ?>
-    <?php
-      wp_nav_menu(array(
-        "wp_theme_location" => "primary",
-        "container" => "nav"
-      ));
-    ?>
-    <button id="nav-btn">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
+    <div class="container">
+      <div>
+        <?php if(has_custom_logo()) : ?>
+          <a id="logo-link" href="<?php echo esc_url(home_url("/")); ?>">
+            <img id="logo-img" src="<?php echo esc_url($logo[0]); ?>" />
+          </a>
+        <?php endif; ?>
+        <?php
+          wp_nav_menu(array(
+            "wp_theme_location" => "primary",
+            "container" => "nav"
+          ));
+        ?>
+        <button id="nav-btn">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
   </header>
   <main>
