@@ -123,6 +123,7 @@ header .container > div {
   text-transform: uppercase;
   color: #252525;
   transition: 0.3s;
+  font-family: 'Cabin', sans-serif;
 }
 .menu li a:hover {
   color: #c59d5f;

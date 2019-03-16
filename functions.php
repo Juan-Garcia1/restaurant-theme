@@ -5,7 +5,7 @@ function rosa_load_stylesheets() {
   wp_register_style("normalize", get_template_directory_uri() . "/css/normalize.css");
   wp_enqueue_style("normalize");
 
-  wp_register_style("fonts", "https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Source+Sans+Pro:900");
+  wp_register_style("fonts", "https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:900");
   wp_enqueue_style("fonts");
   
   wp_register_style("stylesheet", get_template_directory_uri() . "/style.css");
