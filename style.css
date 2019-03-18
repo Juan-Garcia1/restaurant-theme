@@ -135,6 +135,54 @@ header .container > div {
   outline: 0;
   cursor: pointer;
 }
+/* .current-menu-item a {
+  color: #c59d5f;
+} */
+#menu-main-menu .current_page_item a {
+  color: #c59d5f;
+}
+
+@media(min-width: 768px) {
+  header .container > div {
+    justify-content: space-between;
+  }
+  #logo-link {
+    margin: initial;
+  }
+  .menu-main-menu-container {
+    position: initial;
+    background: none;
+    height: auto;
+    width: auto;
+    top: initial;
+    left: initial;
+    padding-top: initial;
+    transform: initial;
+    transition: transform 0.3s linear;
+  }
+  #menu-main-menu {
+    display: flex;
+  }
+  #nav-btn {
+    display: none;
+  }
+  .menu-main-menu-container.open {
+    box-shadow: initial;
+  }
+  #menu-main-menu .current_page_item a {
+    position: relative;
+  }
+  #menu-main-menu .current_page_item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    transform: translateX(-50%);
+    background: #c59d5f;
+  }
+}
 
 /* FRONT PAGE */
 .hero {
