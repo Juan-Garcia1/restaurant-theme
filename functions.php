@@ -50,7 +50,7 @@ function rosa_init_widgets() {
   register_sidebar(array(
     "name" => "Sidebar",
     "id" => "sidebar",
-    "before_widget" => "<div>",
+    "before_widget" => "<div class='sidebar-widget'>",
     "after_widget" => "</div>",
     "before_title" => "<h3>",
     "after_title" => "</h3>"

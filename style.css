@@ -282,15 +282,39 @@ blockquote {
   width: 100%;
   height: auto;
 }
-.sidebar h3 {
+.sidebar-widget h3 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-.sidebar h3,
+.sidebar-widget h3,
 .content h1 {
   color: #252525;
+}
+
+.sidebar-widget:not(:last-child) {
+  border-bottom: solid 2px #ececec;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-widget a {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #737373;
+}
+
+.sidebar-widget a:hover {
+  color: #c59d5f;
+}
+
+.sidebar-widget:nth-of-type(4) ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sidebar-widget:nth-of-type(4) ul li {
+  flex-basis: 50%;
 }
 
 /* SEARCH FORM */
