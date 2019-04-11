@@ -16,7 +16,7 @@
 </head>
 <body <?php body_class(); ?>>
   
-  <header>
+  <header id="main-header">
     <div class="container">
       <div>
         <?php if(has_custom_logo()) : ?>
